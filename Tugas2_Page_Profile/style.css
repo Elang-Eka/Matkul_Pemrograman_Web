@@ -1,0 +1,78 @@
+
+
+.luar {
+    background-color: rgb(92, 2, 2);
+    padding: 20px;
+}
+
+.dalam {
+    color: #fff2bc;
+    font-size: large;
+    text-align: center;
+    border:  5px solid rgb(255, 255, 255);
+    background-color: black;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+@font-face{font-family:'HoboStd'; src:url(font/HoboStd.otf);}
+
+.pembuka h1 {
+    color:rgb(72, 196, 179); 
+    font-family: HoboStd;
+}
+
+.pembuka img {
+    height: 200px;
+}
+
+.pembuka p {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.academik {
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: darkgrey;
+}
+
+.academik h2 {
+        text-align: center;
+}
+
+.garis {
+    border-top: 3px solid rgb(211, 0, 0); 
+    border-bottom:  3px solid rgb(211, 0, 0);
+}
+
+.garis table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jarak {
+    padding-left: 100px;
+ }
+
+ .hobfav {
+    display: inline-flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .hobbi {
+    text-align: justify;
+    margin-right: 93px;
+    margin-left: 92px;
+ }
+
+ .pembatas {border-left: 3px solid rgb(211, 0, 0);}
+
+ .favoritemov {
+    text-align: justify;
+    margin-left: 58px;
+    margin-right: 57px;
+ }
+
