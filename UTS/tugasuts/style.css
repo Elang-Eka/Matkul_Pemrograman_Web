@@ -1,0 +1,195 @@
+.all {
+    padding-top: 5px;
+}
+
+.judul {
+    text-align: center;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #009aa5;
+  }
+
+.menu li{
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+  }
+  
+.menu li a:hover {
+    background-color: #4100f3;
+}
+
+.badan{
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: black;
+}
+
+.profile{
+    float: left;
+    width: 13%;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.foto{
+    text-align: center;
+}
+
+.sambutan h3{
+    text-align: center;
+}
+
+.sambutan table {
+    margin-left: auto;
+    margin-right: auto;
+ }
+ 
+.sambutan th {
+    text-align: left;
+ }
+
+ .datautama {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 78%;
+    text-align: center;
+ }
+
+ .datautama h1{
+    padding: 10px;
+ }
+
+ .cari{
+   float: right;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   padding: 20px;
+   margin-top: 20px;
+   width: 78%;
+   text-align: center;
+ }
+
+ .databarang {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 78%;
+ }
+
+ .databarang table{
+    width: 100%;
+    text-align: center;
+ }
+
+ .databarang thead{
+    background-color: orange;
+ }
+
+ .databarang tbody a{
+    display: inline;
+ }
+
+ .databarang h1{
+    padding: 10px;
+ }
+
+ .tambahbarang {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 78%;
+ }
+
+ .tambahbarang h1{
+    text-align: center;
+ }
+
+ .form{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+ 
+label{
+	font-size: 16pt;
+}
+
+.tombol_input{
+	background: #46de4b;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.link{
+	color: #232323;
+	text-decoration: none;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+ .data {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 78%;
+ }
+
+ .data table{
+    width: 100%;
+    text-align: center;
+ }
+
+ .data thead{
+    background-color: orange;
+ }
+ .data h1{
+    padding: 10px;
+ }
+
+ .updatebarang {
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 78%;
+ }
+
+ .updatebarang h1{
+    text-align: center;
+ }
