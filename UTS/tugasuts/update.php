@@ -1,30 +1,43 @@
 <?php
 
 include ('conn.php');
-  
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-  {
-      $sku = $_POST['sku'];
-      $nama_barang = $_POST['nama_barang'];
-      $kategori = $_POST['kategori'];
-      $jumlah_barang = $_POST['jumlah_barang'];
-      $harga_barang = $_POST['harga_barang'];
-      
-      $query = "UPDATE barang SET nama_barang='$nama_barang', kategori='$kategori', jumlah_barang='$jumlah_barang', 
-      harga_barang='$harga_barang' WHERE sku='$sku'";
 
-      $result = mysqli_query(connection(),$query);
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if (isset($_GET['sku'])) {
+            //query SQL
+            $sku_upd = $_GET['sku'];
+            $query = "SELECT * FROM barang WHERE sku = '$sku_upd'";
+    
+            //eksekusi query
+            $result = mysqli_query(connection(),$query);
+        }
+    }
 
-      header("Location: http://localhost/tugasuts/barang.php");
-  }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        $sku = $_POST['sku'];
+        $kategori = $_POST['kategori'];
+        $nama_barang = $_POST['nama_barang'];
+        $jumlah_barang = $_POST['jumlah_barang'];
+        $harga_barang = $_POST['harga_barang'];
+        
+        $sql = "UPDATE barang SET nama_barang='$nama_barang', kategori='$kategori', jumlah_barang='$jumlah_barang', 
+        harga_barang='$harga_barang' WHERE sku='$sku'";
 
-  if ($_SERVER['REQUEST_METHOD'] === 'GET') 
-  {
-      $sku = $_GET['sku'];
-      $query_get = "SELECT * FROM barang WHERE sku = '$sku'";
-      $result_get = mysqli_query(connection(),$query_get);
-  }
+        $result = mysqli_query(connection(),$sql);
+        
+        if ($result) {
+            $status = 'ok';
+          }
+          else{
+            $status = 'err';
+          }
+    
+          //redirect ke halaman lain
+          header('Location: barang.php?status='.$status);
+      }
 
+    
 ?>
 
 <!DOCTYPE html>
@@ -83,12 +96,14 @@ include ('conn.php');
             
             <div class="updatebarang">
             <h1>Update Data Barang Baru</h1>
+                
             <form action="update.php" method="POST">
-                <?php while ($data = mysqli_fetch_array($result_get)) : ?>
+            <?php while($data = mysqli_fetch_array($result)): ?>
+                    <input type="hidden" name="sku" class="form" value="<?php echo $data['sku'] ?>">
                     <label>NAMA BARANG</label>
                     <input type="text" name="nama_barang" class="form" value="<?php echo $data['nama_barang'] ?>">
                     <label>Kategori</label>
-                    <select class="form" name="kategori_barang">
+                    <select class="form" name="kategori">
                         <option> Pilihan </option>
                         <option value="Makanan" <?php echo $data['kategori']=='Makanan' ? 'selected="selected"' : ''?>> Makanan </option>
                         <option value="Minuman" <?php echo $data['kategori']=='Minuman' ? 'selected="selected"' : ''?>> Minuman </option>
@@ -98,8 +113,8 @@ include ('conn.php');
                     <input type="text" name="jumlah_barang" class="form" value="<?php echo $data['jumlah_barang'] ?>">
                     <label>HARGA BARANG</label>
                     <input type="text" name="harga_barang" class="form" value="<?php echo $data['harga_barang'] ?>">
-                    <input type="submit" name="submit" class="tombol_input" value="Update">
-                <?php endwhile; ?>
+            <?php endwhile; ?>
+            <button type="submit" class="tombol_input">Update</button>
             </form>
             </div>
         </div>
